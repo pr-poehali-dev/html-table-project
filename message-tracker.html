@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет сообщений</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fb;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .card-header {
+            background: linear-gradient(to right, #4782e6, #7e58d5);
+            padding: 20px;
+            color: white;
+        }
+        .card-title {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .card-content {
+            padding: 24px;
+        }
+        .search-bar {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .input {
+            flex: 1;
+            max-width: 400px;
+            padding: 10px 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .button {
+            padding: 10px 16px;
+            background-color: transparent;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #f5f5f5;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            background-color: rgba(0,0,0,0.03);
+            font-weight: 600;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        tr:hover {
+            background-color: rgba(0,0,0,0.02);
+            transition: background-color 0.2s;
+        }
+        .empty-message {
+            text-align: center;
+            padding: 32px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Учет сообщений</h1>
+            </div>
+            <div class="card-content">
+                <div class="search-bar">
+                    <input type="text" class="input" placeholder="Поиск сообщений...">
+                    <button class="button">Очистить</button>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Дата получения</th>
+                                <th>Входящее сообщение</th>
+                                <th>Куда пришло</th>
+                                <th>Дата ответа</th>
+                                <th>Куда ответили</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01.09.2023</td>
+                                <td>Запрос на предоставление данных</td>
+                                <td>Отдел кадров</td>
+                                <td>03.09.2023</td>
+                                <td>Бухгалтерия</td>
+                            </tr>
+                            <tr>
+                                <td>15.09.2023</td>
+                                <td>Запрос на техническую поддержку</td>
+                                <td>IT отдел</td>
+                                <td>15.09.2023</td>
+                                <td>Служба поддержки</td>
+                            </tr>
+                            <tr>
+                                <td>22.09.2023</td>
+                                <td>Предложение о сотрудничестве</td>
+                                <td>Отдел продаж</td>
+                                <td>29.09.2023</td>
+                                <td>Маркетинг</td>
+                            </tr>
+                            <tr>
+                                <td>05.10.2023</td>
+                                <td>Запрос на согласование контракта</td>
+                                <td>Юридический отдел</td>
+                                <td>12.10.2023</td>
+                                <td>Руководство</td>
+                            </tr>
+                            <tr>
+                                <td>18.10.2023</td>
+                                <td>Уведомление о проведении совещания</td>
+                                <td>Все отделы</td>
+                                <td>19.10.2023</td>
+                                <td>Управление персоналом</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
